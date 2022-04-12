@@ -9,28 +9,13 @@
  * @param {number} n
  * @return {number}
  */
-var climbStairs = function(n) {
-    if (n < 4) return n;
-    return (climbStairs(n - 1) + climbStairs(n -2));
-
-        
-//      let cache = {};
+var climbStairs = function(n, memo = {}) {
+    if(memo[n]) return memo[n]
+    if (n < 2) return 1;
+     memo[n] = climbStairs(n-1, memo) + climbStairs(n-2, memo)
     
-//     let howManyWays = function(n) {
-//         if (n in cache) {
-//             return cache[n];
-//         }
-
-//         if (n < 4) {
-//             cache[n] = n;
-//             return cache[n];
-//         }
+    return memo[n]
         
-//         cache[n] = (howManyWays(n - 1) + howManyWays(n - 2));
-//         return cache[n];
-//     }
-    
-//     return howManyWays(n);
 };
 // @lc code=end
 
