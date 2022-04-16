@@ -11,7 +11,7 @@
  * @return {number}
  */
  var search = function(list, item) {
-    let low = 0
+   let low = 0
    let high = list.length - 1
 
   while (low <= high) {
