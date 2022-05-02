@@ -13,9 +13,9 @@
 //binary search
 var twoSum = function(numbers, target) {
     let res = [];
-    for (i = 0; i < numbers.length; i++) {
-        let toSearch = target - numbers[i];
-        let idx = binSearch(numbers, i + 1, numbers.length, toSearch);
+    for (let i = 0; i < nums.length; i++) {
+        let toSearch = target - nums[i];
+        let idx = binSearch(nums, i + 1, nums.length, toSearch);
         if (idx > -1) {
             res = [i + 1, idx + 1];
             break;
@@ -23,6 +23,7 @@ var twoSum = function(numbers, target) {
     }
     
     return res;
+    
 };
 
 function binSearch(nums, l, r, num) {
