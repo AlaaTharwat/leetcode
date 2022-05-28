@@ -32,7 +32,7 @@ var fourSum = function(nums, target) {
                     left += 1;
                 }
             }
-            while(nums[j] === nums[j + 1]) j++;
+            while(nums[j] === nums[j + 1]) j++;``
         }
         while(nums[i] === nums[i + 1]) i++;
     }
