@@ -24,7 +24,6 @@ var containsNearbyAlmostDuplicate = function(nums, k, t) {
            }
         }else {
             map[nums[i]] = i
-            // console.log(map)
         }
     }
 

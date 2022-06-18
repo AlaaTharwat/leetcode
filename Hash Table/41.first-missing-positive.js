@@ -10,27 +10,27 @@
  * @return {number}
  */
 var firstMissingPositive = function(nums) {
+
+    //put numbers into map and check if i doesn't exist
+    let max = 0;
     let map = {};
-    // for(let i = 0; i < nums.length; i++){
-    //     if(nums[i] < 0) nums[i] = 0;
-    // }
-
-    for(let i = 0; i < nums.length; i++){
+    
+    for(let i = 0; i< nums.length; i++){
         if(!map[nums[i]]){
-            if(nums[i] > 0)  map [nums[i]] = true
+            map[nums[i]] = 1;
+        }else{
+            map[nums[i]]++;
         }
+        if(nums[i] > max) max = nums[i]
     }
-
-    if(!map[0]) map[0] = true
-
-
-    for(let i = 0; i< Object.keys(map).length; i++){
+    
+    for(let i = 1; i <= max+1;i ++){
         if(!map[i]) return i
+        if(map[i] > 1)  console.log("repeated", i) 
     }
 
 
-    return Object.keys(map).length
-    // for(l)
+
  
 };
 // @lc code=end
